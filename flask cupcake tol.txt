@@ -1,0 +1,22 @@
+Cupcakes. Let's look at the routing!
+
+Hey, still doing good.
+
+Route: GET /api/cupcakes 
+	Responds with all the cupcakes in this format 
+	{cupcakes: [{id, flavor...}, {id, flavor...}...]}
+
+Route GET /api/cupcakes/<int:cupcake_id>
+	Responds with selected cupcake in this format
+	{cupcakes: [{id, flavor, size, rating, image]}
+
+Route POST /api/cupcakes
+	Responds with posted cupcake in this format
+	{cupcakes: {id, flavor, size, rating, image}
+
+Route PATCH /api/cupcakes/<int:cupcake-id>
+	Response with updated in format
+	{cupcakes: {id, flavor, size, rating, image}
+
+Route DELETE /api/cupcakes/<int:cupcake_id>
+	Response {message: "DELETED"}
