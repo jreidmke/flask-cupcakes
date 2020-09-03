@@ -5,7 +5,7 @@ async function addCupcake() {
         rating: $('#rating').val(),
         image: $('#image').val()
     }
-    console.log(data)
+    $('.list-group').append(`<li>${data.flavor}</li>`)
     await axios.post('/api/cupcakes', data = data)
 }
 
