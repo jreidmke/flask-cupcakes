@@ -8,18 +8,26 @@
 </head>
 <body>
 
-    {% for cupcake in cupcakes %}
-    <li>{{cupcake.flavor}}</li>
-    {% endfor %}
+    <div class="container">
+        <div class="col-4">
+            <h1 class="display-4">Cupcakes</h1>
+            <ul class="list-group">
+                {% for cupcake in cupcakes %}
+                <li class="list-group-item">{{cupcake.flavor}}</li>
+                {% endfor %}
+            </ul>
+        </div>
 
-
-    <form>
-        <input type="text" id="flavor" placeholder="flavor">
-        <input type="text" id="size" placeholder="size">
-        <input type="number" id="rating" placeholder="rating">
-        <input type="text" id='image' placeholder="image">
-        <button id="new-cupcake-btn">Submit</button>
-    </form>
+        <div class="col-4 mt-3">
+            <form>
+                <input class="form-control form-control-lg" type="text" id="flavor" placeholder="flavor">
+                <input class="form-control form-control-lg" type="text" id="size" placeholder="size">
+                <input class="form-control form-control-lg" type="text" id="rating" placeholder="rating">
+                <input class="form-control form-control-lg" type="text" id='image' placeholder="image">
+                <button class="btn btn-info btn-large btn-block mt-1" id="new-cupcake-btn">Submit</button>
+            </form>
+        </div>
+    </div>
 
 
     <script src="https://unpkg.com/axios/dist/axios.js"></script>
